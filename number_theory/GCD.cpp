@@ -15,3 +15,15 @@ int main(){
     }
     return 0;
 }
+// solve(a,  b)
+// {
+//    if (a == 0)
+//           return b;
+//    if (b == 0)
+//           return a;
+//    if (a == b)
+//           return a;
+//    if (a > b)
+//           return solve(a - b, b);
+//    return solve(a, b - a);
+//   }
