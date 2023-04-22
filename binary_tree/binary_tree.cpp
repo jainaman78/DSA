@@ -51,8 +51,7 @@ binary_tree<int>* takeinput(){
     return root;
 
 }
-
-//print level wise
+//print level wise d
 void printlevel(binary_tree<int>* root){
     if(root==NULL){
         return;
