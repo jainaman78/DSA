@@ -1,27 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 void prints(int **edges,int n,int sv,bool*visited){
-    queue<int> pending;
-    pending.push(sv);
+    cout<<sv<<endl;
     visited[sv]=true;
-    while(!pending.empty()){
-        int current=pending.front();
-        cout<<current<<" ";
-        pending.pop();
-        for(int i=0;i<n;i++){
-            if(i==current){
-                continue;
-            }
+    for(int i=0;i<n;i++){
+        if(i==sv){
+            continue;
+        }
+        if(edges[sv][i]==1){
             if(visited[i]){
                 continue;
             }
-            if((edges[current][i]==1)&&(!visited[i])){
-                pending.push(i);
-                visited[i]=true;
-            }
-    
+            prints(edges,n,i,visited);
         }
-        
     }
 }
 
