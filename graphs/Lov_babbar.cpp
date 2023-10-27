@@ -1,18 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-//love babbar adjacency list
 class graph{
     public:
     unordered_map<int,list<int>> adj;
     void add(int u,int v, bool direction){
-        //directiom=0 undirected
-        //directiom=1 directed
-
         adj[u].push_back(v);
-        if(direction==0){
-            adj[v].push_back(u);
-        }
+        adj[v].push_back(u);
     }
     void print(){
         for(auto i:adj){
@@ -23,7 +16,6 @@ class graph{
             cout<<endl;
         }
     }
-
 };
 
 int main(){
@@ -44,4 +36,24 @@ int main(){
     g.print();
     return 0;
 }
+// 1-> 2,3
+// 2->3,4
 
+
+/*
+Pointer
+array
+OOPS pillar 4
+linkedlist 
+complexity
+for(i=0;i<n/2;i++)------->O(logn)
+
+*/
+/*
+int arr[4]={1,2,3,4};
+for (int i=0;i<n;i++){
+arr[i];
+}
+
+
+*/

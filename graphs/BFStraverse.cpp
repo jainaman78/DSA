@@ -22,13 +22,13 @@ void print(bool **edges, int v, int sv, bool *visited)
                 visited[i] = true;
             }
         }
-        pendingVertices.pop();
+        pendingVertices.pop(); 
     }
 }
 
 int main()
 {
-    // Write your code here
+    // Adjacency matrix
     int v, e;
     cin >> v >> e;
     bool **edges = new bool *[v];
