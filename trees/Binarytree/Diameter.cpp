@@ -54,23 +54,20 @@ void levelorder(node* root){
     }
     
 }
-//height 
-int height(node * root){
+int diameter(node* root){
     if(root==NULL){
         return 0;
     }
-    int left=height(root->left);
-    int right=height(root->right);
-    int ans=max(left,right)+1;
-
-    return ans;
+    int op1=diameter(root->left);
+    int op2=diameter(root->right);
+    int op3=
 }
+
 int main(){
     node*root=NULL;
     root=create(root);
-    cout<<"printing height"<<endl;
-    int h=height(root);
-    cout<<h;
+    cout<<"printing"<<endl;
+    levelorder(root);
 
 }
 //1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
